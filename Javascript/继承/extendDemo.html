@@ -1,0 +1,38 @@
+<!--
+ * @Descripttion: 
+ * @Author: zhangai
+ * @Date: 2020-08-12 21:16:36
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 原型链继承
+        // 父类
+        function Parent (name, age) {
+            this.name = name
+            this.age = age
+            this.work = ['banzhuan', 'qiafan']
+            this.sayAge = function () { }
+        }
+        Parent.prototype.getName = function () {}
+        // 子类
+        function Child (sex) {
+            this.sex = sex
+            this.SayHello = function () {}
+        }
+        // 子类的原型为父类的一个实例对象
+        Child.prototype = new Parent()
+        let s1 = new Child(12)
+        let s2 = new Child(20)
+        console.log(s1, s2)
+
+    </script>
+    
+</body>
+</html>
