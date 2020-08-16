@@ -1,0 +1,78 @@
+<!--
+ * @Descripttion: 
+ * @Author: zhangai
+ * @Date: 2020-08-16 18:08:17
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #box1 { width: 300px; height: 300px; background: blueviolet; }
+        #box2 { width: 200px; height: 200px; background: aquamarine; }
+        #box3 { width: 100px; height: 100px; background: tomato; }
+        div { overflow: hidden; margin: 50px auto; }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        box1
+        <div id="box2">
+            box2
+            <div id="box3">box3</div>
+        </div>
+    </div>
+    <ul id="isUl">
+        <li id="li0">1</li>
+        <li id="li1">2</li>
+        <li id="li2">3</li>
+    </ul>
+    <script>
+        function clickBox1 () {
+            console.log('点击了box1')
+        }
+        function clickBox2 () {
+            console.log('点击了box2')
+        }
+        function clickBox3 () {
+            console.log('点击了box3')
+        }
+        // 事件监听，第三个参数是布尔值，默认false，false是事件冒泡，true是事件捕获
+        /**
+        事件从里到外： box3->box2->box1 事件冒泡
+        document.getElementById('box1').addEventListener('click', clickBox1, false)
+        document.getElementById('box2').addEventListener('click', clickBox2, false)
+        document.getElementById('box3').addEventListener('click', clickBox3, false)
+        */
+        /**
+        事件从外到里： box1->box2->box3 事件捕获
+        document.getElementById('box1').addEventListener('click', clickBox1, true)
+        document.getElementById('box2').addEventListener('click', clickBox2, true)
+        document.getElementById('box3').addEventListener('click', clickBox3, true)
+        */
+
+        function clickLi0 () {
+            console.log('点击了第一li')
+        }
+        function clickLi1 () {
+            console.log('点击了第二li')
+        }
+        function clickLi2 () {
+            console.log('点击了第三li')
+        }
+        document.getElementById('isUl').addEventListener('click', function (event) {
+            let srcId = event.target.id
+            if(srcId == 'li0'){
+                clickLi0();
+            }else if(srcId == 'li1') {
+                clickLi1();
+            }else if(srcId == 'li2') {
+                clickLi2();
+            }
+        })
+
+    </script>
+</body>
+</html>
