@@ -1,3 +1,9 @@
+<!--
+ * @Description: 
+ * @Autor: zhangai
+ * @Date: 2022-08-03 10:23:15
+ * @LastEditTime: 2022-08-15 10:01:12
+-->
 ### MVVM
 
     MVVM是Model-View-ViewModel的缩写,
@@ -17,8 +23,5 @@
     2、数组实现响应式：
 
     对于数组则是通过继承重写数组的方法splice、pop、push、shift、unshift、sort、reverse、等可以修改原数组的方式实现响应式的，但是通过length以及直接利用item[index]方式修改数组是不能实现响应式的改变dom（这种两种方式涉及到数组的内部实现）。在数据更新后为了避免过于频繁的进行dom的操作，在vue中会将更新的dom进行批量操作，而不是直接有数据更新就刷新dom，vue将需要更新的dom压入异步队列记性批量操作，提高性能。
-
-> https://www.jb51.net/article/142950.htm
-> https://juejin.im/post/6844903709055401991#heading-2
 
 ### 
