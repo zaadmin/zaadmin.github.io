@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //   对象原始拷贝
+    let user = { name: 'leo', skill: { Javascript: 90, css: 80 }}
+    let newUser = user
+    newUser.name = 'John'
+    newUser.skill.Javascript = 96
+    console.log("原始数据：" + user.name) //John
+    console.log("拷贝后的数据：" + newUser.name) //John
+    console.log("原始数据：" + user.skill.Javascript) //96
+    console.log("拷贝后的数据：" + newUser.skill.Javascript) //96
+
+    //  数组原始拷贝
+    let userArr = ['John', 'san', {name: 'Jery'}]
+    let newArr = userArr
+    userArr[0] = 'Sam'
+    userArr[2][name] = 'Jenny'
+    console.log("原始数据：" + userArr[0]) //Sam
+    console.log("拷贝后的数据：" + newArr[0]) //Sam
+    console.log("原始数据：" + userArr[2][name]) //Jenny
+    console.log("拷贝后的数据：" + newArr[2][name]) //Jenny
+
+    // 实现浅拷贝  Object.assign()
+    /**
+      Object.assign(target, ...sources) 第一个参数接受是拷贝的目标target,剩下的参数是拷贝的源对象（可以是多个）
+    */
+    // 对象浅拷贝
+    let initUser = { name: 'leo', skill: { Javascript: 90, css: 80 }}
+    let lightUser = Object.assign({}, initUser)
+    lightUser.name = 'Jenny'
+    lightUser.skill.css = 90
+    console.log("原始数据：" + initUser.name) //leo
+    console.log("浅拷贝后的数据：" + lightUser.name) //Jenny
+    console.log("原始数据：" + initUser.skill.css) //90
+    console.log("浅拷贝后的数据：" + lightUser.skill.css) //90
+    // 数组浅拷贝
+    let initUserArr = ['John', 'san', {name: 'Jery'}]
+    let lightUserArr = Object.assign([], initUserArr)
+    lightUserArr[0] = 'leo'
+    lightUserArr[2][name] = 'Jerry'
+    console.log("原始数据：" + initUserArr[0]) //John
+    console.log("浅拷贝后的数据：" + lightUserArr[0]) //leo
+    console.log("原始数据：" + initUserArr[2][name]) //Jerry
+    console.log("浅拷贝后的数据：" + lightUserArr[2][name]) //Jerry
+
+    // Object.assign(undefined) //报错
+    // Object.assign(null)//报错
+    let a = Object.assign({}, undefined)
+    let b = Object.assign({}, null)
+    console.log(a, b)
+    let testUser = {name: 'leo'}
+    console.log(Object.assign(testUser, undefined) == testUser)
+    console.log( Object.assign(testUser, null) == testUser)
+
+    // Array.prototype.slice()
+    let sliceArr = Array.prototype.slice.call(initUserArr)
+    sliceArr[0] = 'John1'
+    sliceArr[2][name] = 'Jery1'
+    console.log("原始数据：" + initUserArr[0]) //John
+    console.log("浅拷贝后的数据：" + sliceArr[0]) //John1
+    console.log("原始数据：" + initUserArr[2][name]) //Jery1
+    console.log("浅拷贝后的数据：" + sliceArr[2][name]) //Jery1
+
+    // Array.prototype.concat()
+    let user1 = [{name: 'amy'}, {age: 28}]
+    let user2 = [{address: 'shanghai'}, {job: 'program'}]
+    let concatUser = user1.concat(user2)
+    user2[0].address = '上海'
+    console.log(user1)//[{name: 'amy'}, {age: 28}]
+    console.log(user2)//[{address: '上海'}, {job: 'program'}]
+    console.log(concatUser)//[{name: 'amy'}, {age: 28},{address: '上海'}, {job: 'program'}]
+
+    //拓展运算符（...）
+    let firstUser = { name: 'leo', detail: { age: 18, sex: 'man'}}
+    let lastUser = {...firstUser}
+    lastUser.name = 'Jane'
+    lastUser.detail.age = 20
+    console.log("原始数据：" + firstUser.name) //leo
+    console.log("浅拷贝后的数据：" + lastUser.name) //Jane
+    console.log("原始数据：" + firstUser.detail.age) //20
+    console.log("浅拷贝后的数据：" + lastUser.detail.age) //20
+
+    // 手写实现浅拷贝
+
+    function lightCopy (source) {
+      let target = {}
+      for (let key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key]
+        }
+      }
+      return target
+    }
+
+    let copyArr = lightCopy(firstUser)
+    copyArr.name = 'light'
+    console.log("原始数据：" + firstUser.name) //leo
+    console.log("浅拷贝后的数据：" + copyArr.name) //light
+    console.log("原始数据：" + firstUser.detail.age) //20
+    console.log("浅拷贝后的数据：" + copyArr.detail.age) //20
+
+  </script> 
+</body>
+</html>

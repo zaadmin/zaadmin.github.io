@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局</title>
+    <style>
+        .content {
+            width: 210px;
+            height: 210px;
+            border: 1px solid red;
+        }
+        .item {
+            width: 60px;
+            height: 60px;
+            background-color: blue;
+            margin: 10px;
+        }
+        /* 默认布局 */
+        /* .box {
+            display: flex;
+            flex-direction: row;
+        } */
+        /* 主轴row水平居中 */
+        .box {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        /* 主轴column水平居中 */
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* 主轴row垂直居中 */
+        .box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        /* 主轴column垂直居中 */
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        /* 水平垂直居中 */
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="content box">
+        <div class="item"></div>
+    </div>
+</body>
+</html>
