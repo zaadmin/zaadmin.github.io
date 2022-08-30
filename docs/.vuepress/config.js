@@ -2,7 +2,7 @@
  * @Description: 
  * @Autor: zhangai
  * @Date: 2022-08-17 10:30:06
- * @LastEditTime: 2022-08-30 15:56:25
+ * @LastEditTime: 2022-08-30 16:42:59
  */
 module.exports = {
     lang: 'zh-CN',
@@ -58,19 +58,7 @@ module.exports = {
           { text: '导航', link: '/md/nav/' },
           { text: 'HTTP', link: '/md/https/'}
         ],
-        sidebar: {
-          '/md/nav/': [
-            {
-              title: '组1',
-              collapsable: false,
-              sidebarDepth: 1, 
-              children: ['/md/nav/README.md']
-            },
-          ],
-          '/md/https/': [
-            '/md/https/README.md',
-          ],
-        }
+        sidebar: 'auto'
         //     // '/md/HTTP/': [
         //     // {
         //     //   text: '',
