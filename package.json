@@ -4,8 +4,9 @@
     "vuepress-theme-offwhite": "^2.1.1"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy":"bash deploy.sh"
   },
   "name": "web-system-coding",
   "version": "1.0.0",
@@ -18,6 +19,7 @@
     "@vuepress/plugin-blog": "^1.9.4",
     "vuepress-plugin-dynamic-title": "^1.0.0",
     "vuepress-plugin-sakura": "^1.2.1",
-    "vuepress-theme-reco": "^1.6.14"
+    "vuepress-theme-reco": "^1.6.14",
+    "eslint": "^8.14.0"
   }
 }
