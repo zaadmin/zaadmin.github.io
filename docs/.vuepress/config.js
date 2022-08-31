@@ -2,72 +2,54 @@
  * @Description: 
  * @Autor: zhangai
  * @Date: 2022-08-17 10:30:06
- * @LastEditTime: 2022-08-30 16:42:59
+ * @LastEditTime: 2022-08-31 10:43:44
  */
 module.exports = {
     lang: 'zh-CN',
     title: 'front-end',
     description: '前端体系',
     base:'/web-system-coding/',
-    theme: 'reco',
-    plugins: [
-      //音乐播放器
-      ['@vuepress-reco/vuepress-plugin-bgm-player',
-        {
-          audios: [
-              {
-                  name: '강남역 4번 출구',
-                  artist: 'Plastic / Fallin` Dild',
-                  url: 'https://assets.smallsunnyfox.com/music/2.mp3',
-                  cover: 'https://assets.smallsunnyfox.com/music/2.jpg'
-              },
-              {
-                  name: '用胳膊当枕头',
-                  artist: '최낙타',
-                  url: 'https://assets.smallsunnyfox.com/music/3.mp3',
-                  cover: 'https://assets.smallsunnyfox.com/music/3.jpg'
-              }
-          ],
-          position: {
-              left: '10px',
-              bottom: '10px',
-              'z-index': '999999'
-          },
-          autoShrink: true,
-          floatPosition: 'left',
-          floatStyle: {
-              bottom: '80px',
-              'z-index': '999999'
-          }
-       }],
-      //动态标题
-      ["dynamic-title",{
-          showIcon: "https://www.zpzpup.com/assets/image/favicon.ico",
-          showText: "欢迎回来 O(∩_∩)O~",
-          hideIcon: "https://www.zpzpup.com/assets/image/favicon.ico",
-          hideText: "失联中。。。快回来~",
-          recoverTime: 2000
-      }]
-    ],
+    theme: 'vdoing',
     themeConfig: {
-        displayAllHeaders:true,
-        nextLinks: true, // 上/先一篇链接
-        prevLinks: true,
-        lastUpdated: 'Last Updated',
         nav:  [
-          { text: '导航', link: '/md/nav/' },
-          { text: 'HTTP', link: '/md/https/'}
+          { text: '首页', link: '/' },
+          {
+            text: '前端',
+            link: '/web/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
+            items: [
+                {
+                    text: '学习笔记',
+                    items: [
+                      { text: '《JavaScript教程》', link: '/note/javascript/' },
+                      { text: '《ES6 教程》', link: '/note/es6/' },
+                      { text: '《Vue》', link: '/note/vue/' },
+                      { text: '《React》', link: '/note/react/' },
+                      {
+                        text: '《TypeScript》',
+                        link: '/note/typescript/',
+                      },
+                      {
+                        text: '《Git》',
+                        link: '/note/git/',
+                      },
+                      {
+                        text: 'JS设计模式总结',
+                        link: '/note/4643cd/',
+                      },
+                    ],
+                  },
+            ]
+          },
+          {
+            text: '网络',
+            link: '/network/',
+            items:[
+              {text: 'http', link: '/pages/a7779c/'},
+              {text: '导航', link: '/pages/964955/'}
+            ]
+          }
         ],
-        sidebar: 'auto'
-        //     // '/md/HTTP/': [
-        //     // {
-        //     //   text: '',
-        //     //   collapsible:false,
-        //     //   children: [
-        //     //     '/md/HTTP/http.md',
-        //     //     '/md/HTTP/TCP-IP.md',
-        //     //   ],
-        //     // },]
-        // }
+        sidebar: 'structuring',
+        sidebarDepth: 2,
     }
 }

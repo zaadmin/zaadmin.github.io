@@ -1,9 +1,13 @@
-<!--
- * @Description: 
- * @Autor: zhangai
- * @Date: 2022-08-17 09:37:16
- * @LastEditTime: 2022-08-30 16:14:27
--->
+---
+title: README
+date: 2022-08-25 14:43:26
+permalink: /pages/a7779c/
+categories:
+  - 网络
+  - https
+tags:
+  - 网络
+---
 ## http状态码
 ### 状态码分类
     1XX服务器收到请求
