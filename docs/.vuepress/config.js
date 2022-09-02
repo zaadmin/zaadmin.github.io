@@ -2,7 +2,7 @@
  * @Description: 
  * @Autor: zhangai
  * @Date: 2022-08-17 10:30:06
- * @LastEditTime: 2022-08-31 10:43:44
+ * @LastEditTime: 2022-09-02 10:53:14
  */
 module.exports = {
     lang: 'zh-CN',
@@ -51,5 +51,16 @@ module.exports = {
         ],
         sidebar: 'structuring',
         sidebarDepth: 2,
+        // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
+        author: {
+          name: 'ai.zhang', // 必需
+          link: 'https://github.com/zaadmin', // 可选的
+        },
+        // 页脚信息
+        footer: {
+          createYear: 2019, // 博客创建年份
+          copyrightInfo:
+            'xiaoA', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+        },
     }
 }
