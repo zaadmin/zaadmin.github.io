@@ -6,7 +6,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   theme: 'vdoing', // 使用npm主题包
 
   locales: {
-    '/': {
+    '/web-system-coding/': {
       lang: 'zh-CN',
       title: "xiaoA's blog",
       description: 'web前端学习与总结',
