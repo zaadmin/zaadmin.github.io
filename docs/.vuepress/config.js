@@ -2,12 +2,12 @@
  * @Description: 
  * @Autor: zhangai
  * @Date: 2022-08-17 10:30:06
- * @LastEditTime: 2022-09-02 10:53:14
+ * @LastEditTime: 2022-09-02 11:44:39
  */
 module.exports = {
     lang: 'zh-CN',
-    title: 'front-end',
-    description: '前端体系',
+    title: "xiaoA's blog",
+    description: '记载web前端学习成长，千里之堤，溃于蚁穴',
     base:'/web-system-coding/',
     theme: 'vdoing',
     themeConfig: {
