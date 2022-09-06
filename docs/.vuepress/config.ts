@@ -47,12 +47,27 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
       },
       {
-        text: '页面',
+        text: '布局',
         link: '/ui/',
         items: [
           { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
           { text: 'CSS', link: '/pages/0a83b083bdf257cb/' },
         ],
+      },
+      {
+        text: '网络',
+        link: '/network/',
+        items: [
+          {text: 'http1.X与http2.0', link: '/pages/5826d5/'},
+          {text: '缓存', link: '/pages/dd2bf3/'}
+        ]
+      },
+      {
+        text: '微前端',
+        link: '/network/',
+        items: [
+          {text: '项目搭建', link: '/pages/1caf45/'}
+        ]
       },
       {
         text: '技术',
