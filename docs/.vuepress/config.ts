@@ -66,18 +66,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         text: '微前端',
         link: '/network/',
         items: [
-          {text: '项目搭建', link: '/pages/1caf45/'}
+          {text: '项目搭建', link: '/pages/a17ad1/'}
         ]
-      },
-      {
-        text: '技术',
-        link: '/technology/',
-        items: [
-          { text: '技术文档', link: '/pages/9a7ee40fc232253e/' },
-          { text: 'GitHub技巧', link: '/pages/4c778760be26d8b3/' },
-          { text: 'Nodejs', link: '/pages/117708e0af7f0bd9/' },
-          { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
-        ],
       },
       {
         text: '收藏',
