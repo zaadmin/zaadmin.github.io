@@ -26,20 +26,24 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           {
             text: '学习笔记',
             items: [
-              { text: '《JavaScript教程》', link: '/note/javascript/' },
-              { text: '《ES6 教程》', link: '/note/es6/' },
-              { text: '《Vue》', link: '/note/vue/' },
-              { text: '《React》', link: '/note/react/' },
+              { text: 'JavaScript', link: '/note/javascript/' },
+              { text: 'ES6', link: '/note/es6/' },
+              { text: 'Vue', link: '/note/vue/' },
+              { text: 'React', link: '/note/react/' },
               {
-                text: '《TypeScript》',
+                text: 'TypeScript',
                 link: '/note/typescript/',
               },
               {
-                text: '《Git》',
+                text: 'Git',
                 link: '/note/git/',
               },
               {
-                text: 'JS设计模式总结',
+                text: 'node',
+                link: '/note/node/',
+              },
+              {
+                text: 'JS设计模式',
                 link: '/pages/4643cd/',
               },
             ],
@@ -66,7 +70,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         text: '微前端',
         link: '/network/',
         items: [
-          {text: '项目搭建', link: '/pages/a17ad1/'}
+          {text: '项目搭建', link: '/pages/5abf96/'}
         ]
       },
       {
