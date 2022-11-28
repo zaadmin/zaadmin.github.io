@@ -2,11 +2,12 @@
 home: true
 # heroImage: /img/web.png
 heroText: xiaoA's blog
-tagline: web前端学习记录
+# tagline: web前端学习记录
 # actionText: 立刻进入 →
 # actionLink: /web/
-bannerBg: /img/bg.png 
-# auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
+bannerBg: none
+# /img/bg.png 
+# auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | : 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
 
 features: # 可选的
   - title: 前端
